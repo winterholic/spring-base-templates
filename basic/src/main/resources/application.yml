@@ -1,0 +1,22 @@
+spring:
+  main:
+    log-startup-info: false
+  application:
+    name: basic
+
+  profiles:
+    active: local
+
+springdoc:
+  swagger-ui:
+    path: /docs
+  api-docs:
+    path: /api-docs
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.winterholic.basic
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: NULL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
